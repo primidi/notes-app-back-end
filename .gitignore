@@ -1,3 +1,5 @@
 node_modules
 .DS_Store
 notes-app-back-end.pem
+.env
+.prod.env
