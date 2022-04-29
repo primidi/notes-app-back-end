@@ -15,7 +15,7 @@ exports.up = (pgm) => {
 
 exports.down = (pgm) => {
   // Delete the constraint fk_notes.owner_users.id in notes table
-  pgm.dropConstraint('notes', 'fk_notes.owner_user.id');
+  pgm.dropConstraint('notes', 'fk_notes.owner_users.id');
 
   // Modify owner's old_notes value in note record to be NULL
   pgm.sql("UPDATE notes SET owner = NULL WHERE owner = 'old_notes'");
